@@ -113,4 +113,4 @@ if __name__ == "__main__":
 
         start_date_ord += chunk_size
 
-    print(date_from_ordinal(start_date_ord), date_from_ordinal(end_date_ord))
+    # print(date_from_ordinal(start_date_ord), date_from_ordinal(end_date_ord))
