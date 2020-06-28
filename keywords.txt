@@ -1,0 +1,73 @@
+aetna
+united
+uhc
+cvs
+minuteclinic
+healthhub
+takecare clinic
+urgent care
+emergency room
+ed
+er
+caremark
+pbm
+expressscripts
+esrx
+optum
+optumrx
+bluecross
+bcbs
+blue cross
+the blues
+blue shield
+anthem
+hcsc
+cigna
+humana
+medicare
+medicaid
+kaiser
+deductible
+medical deductible
+health deductible
+insurance deductible
+out of pocket
+out of pocket max
+out of pocket maximum
+copay
+copayment
+premium
+medical premium
+health premium
+insurance premium
+healthcare customer service
+insurance customer service
+healthcare call center
+insurance call center
+membercare customer service
+membercare call center
+pandemic health insurance
+covid health insurance
+covid-19 health insurance
+corona health insurance
+healthcare claims
+healthcare coverage
+surgery
+surgical
+procedure
+treatment
+healthcare plan
+diabetes
+hypertension
+cancer
+renal disease
+dialysis
+chronic
+disease
+acute
+radiology
+mri
+x-ray
+xray
+lab work
+blood work
