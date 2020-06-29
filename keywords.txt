@@ -1,5 +1,6 @@
 aetna
-united
+united health care 
+united healthcare
 uhc
 cvs
 minuteclinic
@@ -7,11 +8,15 @@ healthhub
 takecare clinic
 urgent care
 emergency room
-ed
 er
+emergency department
+erectile dysfunction
+emergency room
 caremark
+care mark
 pbm
 expressscripts
+express scripts
 esrx
 optum
 optumrx
@@ -20,7 +25,9 @@ bcbs
 blue cross
 the blues
 blue shield
-anthem
+Anthem BCBS
+Anthem Blue Cross
+Anthem insurance
 hcsc
 cigna
 humana
@@ -57,10 +64,12 @@ surgical
 procedure
 treatment
 healthcare plan
+heath plan
 diabetes
 hypertension
 cancer
 renal disease
+ESRD
 dialysis
 chronic
 disease
