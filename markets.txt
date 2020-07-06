@@ -1,5 +1,2 @@
-new york
-texas
-florida
-california
-chicago
+philadelphia
+boston
