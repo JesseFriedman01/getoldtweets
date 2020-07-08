@@ -91,7 +91,7 @@ if __name__ == "__main__":
     write_csv_headers(csv_file_name)
 
     # num days in chunk (chunk is time-span)
-    chunk_size = 30
+    chunk_size = 15
     # do not change
     request_count = 0
     # in minutes
