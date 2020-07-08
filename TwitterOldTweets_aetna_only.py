@@ -18,7 +18,8 @@ def get_tweets(market, keyword, start_date, end_date):
     # .setMaxTweets was removed
     tweetCriteria = got.manager.TweetCriteria().setQuerySearch(keyword)\
                                                .setSince(start_date)\
-                                               .setUntil(end_date)
+                                               .setUntil(end_date)\
+                                               .setMaxTweets(10000) 
                                                # .setNear(market)
 
     tweets = got.manager.TweetManager.getTweets(tweetCriteria)
