@@ -19,7 +19,7 @@ def get_tweets(market, keyword, start_date, end_date):
     tweetCriteria = got.manager.TweetCriteria().setQuerySearch(keyword)\
                                                .setSince(start_date)\
                                                .setUntil(end_date)\
-                                               .setMaxTweets(10000) 
+                                               .setMaxTweets(9500) 
                                                # .setNear(market)
 
     tweets = got.manager.TweetManager.getTweets(tweetCriteria)
@@ -133,7 +133,7 @@ if __name__ == "__main__":
         request_count += 1
         tweets = get_tweets(market, keyword, date_from_ordinal(start_date_ord), date_from_ordinal(start_date_ord + chunk_size))
         write_to_csv(csv_file_name, tweets)
-        if request_count == 100:
+        if request_count == 50:
             print ('\t\t\tSleeping')
             request_count = 0
             sleep()
