@@ -133,7 +133,7 @@ if __name__ == "__main__":
         request_count += 1
         tweets = get_tweets(market, keyword, date_from_ordinal(start_date_ord), date_from_ordinal(start_date_ord + chunk_size))
         write_to_csv(csv_file_name, tweets)
-        if request_count == 50:
+        if request_count == 15:
             print ('\t\t\tSleeping')
             request_count = 0
             sleep()
