@@ -18,8 +18,8 @@ def get_tweets(market, keyword, start_date, end_date):
     # .setMaxTweets was removed
     tweetCriteria = got.manager.TweetCriteria().setQuerySearch(keyword)\
                                                .setSince(start_date)\
-                                               .setUntil(end_date)\
-                                               .setNear(market)
+                                               .setUntil(end_date)
+                                               # .setNear(market)
 
     tweets = got.manager.TweetManager.getTweets(tweetCriteria)
     return tweets
@@ -91,25 +91,51 @@ if __name__ == "__main__":
     write_csv_headers(csv_file_name)
 
     # num days in chunk (chunk is time-span)
-    chunk_size = 30
+    chunk_size = 5
     # do not change
     request_count = 0
     # in minutes
     sleep_duration = 16
 
+    # print('getting tweets')
+    # tweets = get_tweets(None, 'cvs', date_from_ordinal(start_date_ord),
+    #                     date_from_ordinal(start_date_ord + chunk_size))
+    #
+    # write_to_csv(csv_file_name, tweets)
+
+
+
+    # while end_date_ord > start_date_ord:
+    #     print('Current start period:', date_from_ordinal(start_date_ord), 'Current end period:', date_from_ordinal(start_date_ord + chunk_size))
+    #     # for market in markets:
+    #     #     print('\tCurrent market:', market)
+    #     for keyword in ['aetna']:
+    #         print('\t\tCurrent keyword:', keyword)
+    #         request_count += 1
+    #         tweets = get_tweets(None, keyword, date_from_ordinal(start_date_ord), date_from_ordinal(start_date_ord + chunk_size))
+    #         write_to_csv(csv_file_name, tweets)
+    #         if request_count == 15:
+    #             print ('\t\t\tSleeping')
+    #             request_count = 0
+    #             sleep()
+
+    #             if request_count == 100:
+    #                 print ('\t\t\tSleeping')
+    #                 request_count = 0
+    #                 sleep()
+
+    market = None
+    keyword = 'aetna'
+
     while end_date_ord > start_date_ord:
         print('Current start period:', date_from_ordinal(start_date_ord), 'Current end period:', date_from_ordinal(start_date_ord + chunk_size))
-        for market in markets:
-            print('\tCurrent market:', market)
-            for keyword in keywords:
-                print('\t\tCurrent keyword:', keyword)
-                request_count += 1
-                tweets = get_tweets(market, keyword, date_from_ordinal(start_date_ord), date_from_ordinal(start_date_ord + chunk_size))
-                write_to_csv(csv_file_name, tweets)
-                if request_count == 15:
-                    print ('\t\t\tSleeping')
-                    request_count = 0
-                    sleep()
+        request_count += 1
+        tweets = get_tweets(market, keyword, date_from_ordinal(start_date_ord), date_from_ordinal(start_date_ord + chunk_size))
+        write_to_csv(csv_file_name, tweets)
+        if request_count == 100:
+            print ('\t\t\tSleeping')
+            request_count = 0
+            sleep()
 
         start_date_ord += chunk_size
 
