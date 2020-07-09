@@ -3,4 +3,5 @@ sudo yum install git -y
 mkdir twitter
 cd twitter
 git clone https://github.com/JesseFriedman01/getoldtweets.git
-pip3 install --user getoldtweets3 ftfy 
+pip3 install --user getoldtweets3 ftfy
+git pull 
